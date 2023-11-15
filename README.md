@@ -1,5 +1,10 @@
 ## Robocall Audio Dataset
 
+[Paper](https://www.csc2.ncsu.edu/techreports/tech/2023/TR-2023-1.pdf) |
+[Google Colab Example](https://colab.research.google.com/drive/13kMfhqM86Ypdojr1nUz0oo3kohggcqi1?usp=sharing) |
+[Website](https://robocall.science) |
+[Citation BibTex](#citation)
+
 ### Dataset Summary
 
 Robocall Audio Dataset is a collection of over one thousand audio recordings of automated or semi-automated phone calls. Such calls are commonly called robocalls. These recordings were made available by the FTC through the Project Point of No Entry initiative ([FTC link](https://www.ftc.gov/legal-library/browse/project-point-no-entry-letters), [FTC News](https://www.ftc.gov/news-events/news/press-releases/2023/07/ftc-law-enforcers-nationwide-announce-enforcement-sweep-stem-tide-illegal-telemarketing-calls-us), [Web Archive link](https://web.archive.org/web/20230418192421/https://www.ftc.gov/legal-library/browse/project-point-no-entry-letters)). The dataset consists of over a thousand robocall audio recording used in the real-world. Most of these robocalls are suspected illegal calls. Malicious actors used a majority of these recordings to defraud people. The dataset also includes the cease and desist letters sent by the FTC to the suspected call-originating entity (telephone carrier or the robocaller).
@@ -58,7 +63,7 @@ audio_dataset = Dataset.from_dict({
 }).cast_column("audio", Audio(sampling_rate=16000))
 
 
-audio_dataset.head()
+audio_dataset
 
 # Output
 # >> Dataset({
@@ -87,11 +92,21 @@ audio_dataset[0]
 
 ## License
 
-CC BY-ND 4.0 Legal Code - Attribution-NoDerivs 4.0 International 
+This document describing the data is released under the Creative Commons BY-ND [ 1] license. The data itself is in the public domain. If you find this structured data useful, we would appreciate (but do not require) an acknowledgement in any publications
 
 ## Citation
 
 ```bibtex
+
+@techreport{robocallDatasetTechReport,
+  author      = {{Sathvik Prasad and Bradley Reaves}},
+  title       = {{Robocall Audio from the FTC's Project Point of No Entry}},
+  institution = {{North Carolina State University}},
+  year        = {2023},
+  month       = {Nov},
+  number      = {TR-2023-1},
+  url         = {}
+}
 
 ```
 
