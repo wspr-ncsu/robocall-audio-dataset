@@ -26,7 +26,7 @@ The recordings were converted to `WAV` (`pcm_s16le`) and resampled to `16kHz` us
 
 ### Dataset Format
 
-The `metadata.csv` format contains the filename and the transcription of the audio recording. It also includes the language used within the call and was detected automatically using [Whisper](https://github.com/openai/whisper). The dataset consists of 1101 calls out of which 97.5% (1073) calls are in english and 2.5% (28) are in Mandarin/Chinese. The `medium` (multilingual) model was used to transcribe the audio. The specific cease and desist letter or the warning letter is also included for each audio recording.
+The `metadata.csv` format contains the filename and the transcription of the audio recording. It also includes the language used within the call and was detected automatically using [Whisper](https://github.com/openai/whisper). The dataset consists of 1432 calls out of which 96.2% (1378) calls are in english and 3.8% (54) are in Mandarin/Chinese. The `medium` (multilingual) model was used to transcribe the audio. The specific cease and desist letter or the warning letter is also included for each audio recording.
 
 ### Cease and Desist Letters and Warning Letters
 
@@ -63,12 +63,12 @@ audio_dataset = Dataset.from_dict({
 }).cast_column("audio", Audio(sampling_rate=16000))
 
 
-audio_dataset
+#audio_dataset
 
 # Output
 # >> Dataset({
 #     features: ['audio', 'transcript', 'language', 'case_pdf'],
-#     num_rows: 1101
+#     num_rows: 1432
 # })
 ```
 
